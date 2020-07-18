@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+<article>
+  <header>
+    <div class="date-container">
+      <div class="month">{{date | month}}</div>
+      <div class="day">{{date | day}}</div>
+      <div class="year">{{date | year}}</div>
+    </div>
+    <div class="heading-container">
+      <h1>{{ title }}</h1>
+      <div>
+        <p class = "info">{{author}}</p>
+        <p class = "info">{{institute}}</p>
+      </p>
+    </div>
+  </header>
+
+  <section class="content">
+    {{ content | safe }}
+  </section>
+</article>
